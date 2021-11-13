@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Collage-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MakeNewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="MakeNewVC" customModule="Assignment_23" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collage Magic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YP3-0B-M6Q">
+                                <rect key="frame" x="111" y="94" width="192" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uue-a2-AxW">
+                                <rect key="frame" x="20" y="241" width="374" height="374"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uue-a2-AxW" secondAttribute="height" multiplier="1:1" id="g2D-yX-784"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NzB-rV-qdK">
+                                    <size key="itemSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MZV-mW-KNE">
+                                <rect key="frame" x="20" y="635" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Layout 1"/>
+                                    <segment title="Layout 2"/>
+                                    <segment title="Layout 3"/>
+                                </segments>
+                                <connections>
+                                    <action selector="layoutChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="UOt-nx-OCm"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pv2-Nc-g1z">
+                                <rect key="frame" x="178" y="696" width="58" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Clear"/>
+                                <connections>
+                                    <action selector="clearPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NNe-qr-Utd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MZV-mW-KNE" firstAttribute="trailing" secondItem="uue-a2-AxW" secondAttribute="trailing" id="DoJ-NX-M0q"/>
+                            <constraint firstItem="YP3-0B-M6Q" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="I40-ow-BFM"/>
+                            <constraint firstItem="uue-a2-AxW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-20" id="Nsw-f8-Fq6"/>
+                            <constraint firstItem="pv2-Nc-g1z" firstAttribute="top" secondItem="MZV-mW-KNE" secondAttribute="bottom" constant="30" id="TEs-E5-mcs"/>
+                            <constraint firstItem="uue-a2-AxW" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="VEQ-R5-Z9C"/>
+                            <constraint firstItem="MZV-mW-KNE" firstAttribute="top" secondItem="uue-a2-AxW" secondAttribute="bottom" constant="20" id="f8x-rJ-MhB"/>
+                            <constraint firstItem="pv2-Nc-g1z" firstAttribute="centerX" secondItem="MZV-mW-KNE" secondAttribute="centerX" id="qcX-Xb-4s6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uue-a2-AxW" secondAttribute="trailing" constant="20" id="qx4-GA-UHV"/>
+                            <constraint firstItem="uue-a2-AxW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="tu3-1E-wNw"/>
+                            <constraint firstItem="YP3-0B-M6Q" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="wFd-9X-Srh"/>
+                            <constraint firstItem="MZV-mW-KNE" firstAttribute="leading" secondItem="uue-a2-AxW" secondAttribute="leading" id="zAi-Da-NAJ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="New Collage" image="photo.on.rectangle.angled" catalog="system" id="gg2-Nr-XTi"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="uue-a2-AxW" id="SaV-dc-HNj"/>
+                        <outlet property="layoutSelector" destination="MZV-mW-KNE" id="T18-GX-Vv6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-149" y="-89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.on.rectangle.angled" catalog="system" width="128" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

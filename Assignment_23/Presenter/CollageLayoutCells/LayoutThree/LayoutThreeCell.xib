@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="LayoutThreeCell" reuseIdentifier="LayoutThreeCell" id="KuO-Jy-krw" userLabel="Layout Three Cell" customClass="LayoutThreeCell" customModule="Assignment_23" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="308"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="336" height="308"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4Oi-BR-RwV">
+                        <rect key="frame" x="0.0" y="0.0" width="336" height="308"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4vV-os-Miz">
+                                <rect key="frame" x="0.0" y="0.0" width="336" height="153"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j78-7q-Cjv">
+                                <rect key="frame" x="0.0" y="155" width="336" height="153"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVt-do-ahA">
+                        <rect key="frame" x="143" y="51.5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="I1u-TX-SYO"/>
+                            <constraint firstAttribute="height" constant="50" id="VzI-2q-GzP"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <imageReference key="image" image="plus" catalog="system" symbolScale="default"/>
+                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="35" weight="bold"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="addButtonPresed:" destination="KuO-Jy-krw" eventType="touchUpInside" id="sj0-mI-uxf"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjz-ju-bos">
+                        <rect key="frame" x="143" y="206.5" width="50" height="50"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <imageReference key="image" image="plus" catalog="system" symbolScale="default"/>
+                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="35" weight="bold"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="addButtonPresed:" destination="KuO-Jy-krw" eventType="touchUpInside" id="HWR-42-6Xt"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="qG8-Ob-c1Q"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="gjz-ju-bos" firstAttribute="centerY" secondItem="j78-7q-Cjv" secondAttribute="centerY" id="Jkn-xX-mEg"/>
+                <constraint firstItem="gjz-ju-bos" firstAttribute="width" secondItem="LVt-do-ahA" secondAttribute="width" id="QdA-oT-IPE"/>
+                <constraint firstItem="gjz-ju-bos" firstAttribute="centerX" secondItem="j78-7q-Cjv" secondAttribute="centerX" id="Uis-jI-R0Z"/>
+                <constraint firstItem="gjz-ju-bos" firstAttribute="height" secondItem="LVt-do-ahA" secondAttribute="height" id="W3Z-Tg-4Y7"/>
+                <constraint firstAttribute="bottom" secondItem="4Oi-BR-RwV" secondAttribute="bottom" id="YfP-pl-DcX"/>
+                <constraint firstItem="4Oi-BR-RwV" firstAttribute="leading" secondItem="KuO-Jy-krw" secondAttribute="leading" id="Ytu-uf-5D1"/>
+                <constraint firstItem="LVt-do-ahA" firstAttribute="centerX" secondItem="4vV-os-Miz" secondAttribute="centerX" id="YvR-jG-Q2h"/>
+                <constraint firstItem="4Oi-BR-RwV" firstAttribute="top" secondItem="KuO-Jy-krw" secondAttribute="top" id="kAV-D3-1dW"/>
+                <constraint firstItem="LVt-do-ahA" firstAttribute="centerY" secondItem="4vV-os-Miz" secondAttribute="centerY" id="pFx-1u-uNk"/>
+                <constraint firstAttribute="trailing" secondItem="4Oi-BR-RwV" secondAttribute="trailing" id="rcZ-oy-ShY"/>
+            </constraints>
+            <size key="customSize" width="336" height="308"/>
+            <connections>
+                <outletCollection property="plusCollection" destination="LVt-do-ahA" collectionClass="NSMutableArray" id="HR2-CB-3db"/>
+                <outletCollection property="plusCollection" destination="gjz-ju-bos" collectionClass="NSMutableArray" id="Pzc-Ni-pRD"/>
+                <outletCollection property="imageCollection" destination="4vV-os-Miz" collectionClass="NSMutableArray" id="rCo-a8-eHZ"/>
+                <outletCollection property="imageCollection" destination="j78-7q-Cjv" collectionClass="NSMutableArray" id="wND-lQ-Y42"/>
+            </connections>
+            <point key="canvasLocation" x="56.521739130434788" y="139.95535714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
