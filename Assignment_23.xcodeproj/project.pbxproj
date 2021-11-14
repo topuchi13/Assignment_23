@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D1171C82740FDF200B8427F /* OldCollagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1171C62740FDF200B8427F /* OldCollagesCell.swift */; };
+		0D1171C92740FDF200B8427F /* OldCollagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D1171C72740FDF200B8427F /* OldCollagesCell.xib */; };
 		0D930B7B273FD0C400A0BF5E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D930B7A273FD0C400A0BF5E /* MainVC.swift */; };
 		0D930B7F273FD12900A0BF5E /* MakeNewVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D930B7E273FD12900A0BF5E /* MakeNewVC.storyboard */; };
 		0D930B81273FD14600A0BF5E /* MakeNewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D930B80273FD14600A0BF5E /* MakeNewVC.swift */; };
@@ -20,6 +22,7 @@
 		0D930BA2273FE63100A0BF5E /* LayoutThreeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D930BA0273FE63100A0BF5E /* LayoutThreeCell.xib */; };
 		0D930BA5273FE90100A0BF5E /* CollageCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D930BA4273FE90100A0BF5E /* CollageCellManager.swift */; };
 		0D930BA727402FBB00A0BF5E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D930BA627402FBB00A0BF5E /* Protocols.swift */; };
+		0DBE9A3F2740EFCE00A1C817 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE9A3E2740EFCE00A1C817 /* LocalFileManager.swift */; };
 		0DD7AC8A273FBAB600A216CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7AC89273FBAB600A216CE /* AppDelegate.swift */; };
 		0DD7AC8C273FBAB600A216CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7AC8B273FBAB600A216CE /* SceneDelegate.swift */; };
 		0DD7AC91273FBAB600A216CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DD7AC8F273FBAB600A216CE /* Main.storyboard */; };
@@ -28,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D1171C62740FDF200B8427F /* OldCollagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldCollagesCell.swift; sourceTree = "<group>"; };
+		0D1171C72740FDF200B8427F /* OldCollagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OldCollagesCell.xib; sourceTree = "<group>"; };
 		0D930B7A273FD0C400A0BF5E /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		0D930B7E273FD12900A0BF5E /* MakeNewVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MakeNewVC.storyboard; sourceTree = "<group>"; };
 		0D930B80273FD14600A0BF5E /* MakeNewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNewVC.swift; sourceTree = "<group>"; };
@@ -41,6 +46,7 @@
 		0D930BA0273FE63100A0BF5E /* LayoutThreeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayoutThreeCell.xib; sourceTree = "<group>"; };
 		0D930BA4273FE90100A0BF5E /* CollageCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollageCellManager.swift; sourceTree = "<group>"; };
 		0D930BA627402FBB00A0BF5E /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		0DBE9A3E2740EFCE00A1C817 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		0DD7AC86273FBAB600A216CE /* Assignment_23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment_23.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD7AC89273FBAB600A216CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DD7AC8B273FBAB600A216CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +67,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D1171C42740FDCF00B8427F /* CVCells */ = {
+			isa = PBXGroup;
+			children = (
+				0D1171C52740FDDA00B8427F /* OldCollagesCell */,
+				0D930B86273FE2F300A0BF5E /* CollageLayoutCells */,
+			);
+			path = CVCells;
+			sourceTree = "<group>";
+		};
+		0D1171C52740FDDA00B8427F /* OldCollagesCell */ = {
+			isa = PBXGroup;
+			children = (
+				0D1171C62740FDF200B8427F /* OldCollagesCell.swift */,
+				0D1171C72740FDF200B8427F /* OldCollagesCell.xib */,
+			);
+			path = OldCollagesCell;
+			sourceTree = "<group>";
+		};
 		0D930B7C273FD0F000A0BF5E /* MakeNewVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +145,7 @@
 			children = (
 				0D930BA4273FE90100A0BF5E /* CollageCellManager.swift */,
 				0D930BA627402FBB00A0BF5E /* Protocols.swift */,
+				0DBE9A3E2740EFCE00A1C817 /* LocalFileManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -164,7 +189,7 @@
 		0DD7AC9E273FCBA400A216CE /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				0D930B86273FE2F300A0BF5E /* CollageLayoutCells */,
+				0D1171C42740FDCF00B8427F /* CVCells */,
 				0D930B7D273FD0F800A0BF5E /* BrowseOldVC */,
 				0D930B7C273FD0F000A0BF5E /* MakeNewVC */,
 				0DD7ACA0273FCBD500A216CE /* Main */,
@@ -257,6 +282,7 @@
 				0DD7AC93273FBAB600A216CE /* Assets.xcassets in Resources */,
 				0DD7AC91273FBAB600A216CE /* Main.storyboard in Resources */,
 				0D930B85273FD16B00A0BF5E /* BrowseOldVC.storyboard in Resources */,
+				0D1171C92740FDF200B8427F /* OldCollagesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +300,9 @@
 				0D930B9C273FE61900A0BF5E /* LayoutTwoCell.swift in Sources */,
 				0D930BA727402FBB00A0BF5E /* Protocols.swift in Sources */,
 				0D930B7B273FD0C400A0BF5E /* MainVC.swift in Sources */,
+				0DBE9A3F2740EFCE00A1C817 /* LocalFileManager.swift in Sources */,
 				0D930BA1273FE63100A0BF5E /* LayoutThreeCell.swift in Sources */,
+				0D1171C82740FDF200B8427F /* OldCollagesCell.swift in Sources */,
 				0DD7AC8C273FBAB600A216CE /* SceneDelegate.swift in Sources */,
 				0D930B81273FD14600A0BF5E /* MakeNewVC.swift in Sources */,
 			);

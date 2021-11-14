@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uue-a2-AxW">
-                                <rect key="frame" x="20" y="241" width="374" height="374"/>
+                                <rect key="frame" x="20" y="221" width="374" height="374"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uue-a2-AxW" secondAttribute="height" multiplier="1:1" id="g2D-yX-784"/>
@@ -37,7 +38,7 @@
                                 <cells/>
                             </collectionView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MZV-mW-KNE">
-                                <rect key="frame" x="20" y="635" width="374" height="32"/>
+                                <rect key="frame" x="20" y="615" width="374" height="32"/>
                                 <segments>
                                     <segment title="Layout 1"/>
                                     <segment title="Layout 2"/>
@@ -48,20 +49,33 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pv2-Nc-g1z">
-                                <rect key="frame" x="178" y="696" width="58" height="31"/>
+                                <rect key="frame" x="178" y="676" width="58" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Clear"/>
                                 <connections>
                                     <action selector="clearPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NNe-qr-Utd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8f-xa-5km">
+                                <rect key="frame" x="354" y="54" width="50" height="36.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="19"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sharePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uxS-ee-F08"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="A8f-xa-5km" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="CKM-2h-bjA"/>
                             <constraint firstItem="MZV-mW-KNE" firstAttribute="trailing" secondItem="uue-a2-AxW" secondAttribute="trailing" id="DoJ-NX-M0q"/>
                             <constraint firstItem="YP3-0B-M6Q" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="I40-ow-BFM"/>
-                            <constraint firstItem="uue-a2-AxW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-20" id="Nsw-f8-Fq6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="A8f-xa-5km" secondAttribute="trailing" constant="10" id="Lii-8a-GlG"/>
+                            <constraint firstItem="uue-a2-AxW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-40" id="Nsw-f8-Fq6"/>
                             <constraint firstItem="pv2-Nc-g1z" firstAttribute="top" secondItem="MZV-mW-KNE" secondAttribute="bottom" constant="30" id="TEs-E5-mcs"/>
                             <constraint firstItem="uue-a2-AxW" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="VEQ-R5-Z9C"/>
                             <constraint firstItem="MZV-mW-KNE" firstAttribute="top" secondItem="uue-a2-AxW" secondAttribute="bottom" constant="20" id="f8x-rJ-MhB"/>
@@ -86,6 +100,7 @@
     </scenes>
     <resources>
         <image name="photo.on.rectangle.angled" catalog="system" width="128" height="100"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

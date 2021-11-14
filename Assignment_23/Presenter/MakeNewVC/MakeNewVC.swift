@@ -7,12 +7,15 @@
 
 import UIKit
 
-class MakeNewVC: UIViewController{
+class MakeNewVC: UIViewController {
     
     @IBOutlet private var layoutSelector: UISegmentedControl!
     @IBOutlet private var collectionView: UICollectionView!
     var activeTag = 0
     var selectedImages = [Int : UIImage]()
+    let fileManager = LocalFileManager()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
@@ -28,11 +31,26 @@ class MakeNewVC: UIViewController{
         collectionView.reloadData()
     }
     
-    
     @IBAction func clearPressed(_ sender: UIButton) {
         selectedImages.removeAll()
         print (selectedImages)
         collectionView.reloadData()
+    }
+    
+    @IBAction func sharePressed(_ sender: UIButton) {
+        let image = makeScreenshot(of: collectionView)
+        let filename = UUID.init()
+        fileManager.save(image: image, withFileName: "\(filename)")
+        let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
+        present(vc, animated: true)
+    }
+    
+    func makeScreenshot(of view: UIView) -> UIImage {
+        let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
+        let image = renderer.image { ctx in
+            view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+        }
+        return image
     }
     
 
