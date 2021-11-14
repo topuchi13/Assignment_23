@@ -23,6 +23,12 @@
                                 </constraints>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collage Magic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="t3e-QT-pKp">
+                                <rect key="frame" x="111" y="94" width="192" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kOI-t3-gzB">
                                 <rect key="frame" x="20" y="655" width="374" height="138"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -41,10 +47,12 @@
                             <constraint firstItem="kOI-t3-gzB" firstAttribute="leading" secondItem="0jd-YL-elE" secondAttribute="leading" id="25B-8h-ahl"/>
                             <constraint firstItem="kOI-t3-gzB" firstAttribute="trailing" secondItem="0jd-YL-elE" secondAttribute="trailing" id="C46-p1-Ktv"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0jd-YL-elE" secondAttribute="trailing" constant="20" id="So7-Do-e0D"/>
+                            <constraint firstItem="t3e-QT-pKp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UuY-nP-arP"/>
                             <constraint firstItem="0jd-YL-elE" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="VmA-D1-vuN"/>
                             <constraint firstItem="0jd-YL-elE" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-40" id="W1p-mU-eQ8"/>
                             <constraint firstItem="0jd-YL-elE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="kqb-0T-B9M"/>
                             <constraint firstItem="kOI-t3-gzB" firstAttribute="top" secondItem="0jd-YL-elE" secondAttribute="bottom" constant="60" id="nUn-8k-MgL"/>
+                            <constraint firstItem="t3e-QT-pKp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="tP3-pl-rKI"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="kOI-t3-gzB" secondAttribute="bottom" constant="20" id="yiJ-Mk-KGQ"/>
                         </constraints>
                     </view>

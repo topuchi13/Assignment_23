@@ -21,7 +21,6 @@ class LocalFileManager {
         for item in items {
                 images.append(UIImage(contentsOfFile: getDocumentsDirectory().appendingPathComponent(item).path)!)
         }
-        print (images)
         return images
     }
     

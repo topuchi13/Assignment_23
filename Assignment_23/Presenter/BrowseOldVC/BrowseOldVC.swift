@@ -28,8 +28,12 @@ class BrowseOldVC: UIViewController {
         imagesToLoad = fileManager.read()
         collectionView.reloadData()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .left)
+        self.collectionView(self.collectionView, didSelectItemAt: IndexPath(item: 0, section: 0))
+    }
 }
-
 
 
 extension BrowseOldVC: UICollectionViewDelegateFlowLayout {
@@ -46,7 +50,16 @@ extension BrowseOldVC: UICollectionViewDelegateFlowLayout {
 
 extension BrowseOldVC:UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderColor = UIColor.systemBlue.cgColor
+        cell?.layer.borderWidth = 2
         imageView.image = imagesToLoad[indexPath.row]
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderColor = UIColor.systemBlue.cgColor
+        cell?.layer.borderWidth = 0
     }
     
 }
@@ -60,6 +73,7 @@ extension BrowseOldVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OldCollagesCell", for: indexPath) as! OldCollagesCell
         cell.makeNew(with: imagesToLoad[indexPath.row])
+        cell.layer.borderWidth = 0
         return cell
     }
     
