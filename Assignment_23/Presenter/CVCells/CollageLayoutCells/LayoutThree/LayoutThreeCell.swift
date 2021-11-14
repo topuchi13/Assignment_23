@@ -13,7 +13,6 @@ class LayoutThreeCell: UICollectionViewCell {
     @IBOutlet private var imageCollection: [UIImageView]!
     var selectedTag: Int = 1
     var delegate: LayoutCellDelegate?
-    let collageCellManager = CollageCellManager()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,9 +35,7 @@ class LayoutThreeCell: UICollectionViewCell {
 }
 
 
-
 extension LayoutThreeCell: LayoutCell {
-    
     func makeNewCell(with imageArray: [Int : UIImage]) {
         imageArray.forEach { (key: Int, value: UIImage) in
             imageCollection.filter({$0.tag == key}).first?.image = value

@@ -9,11 +9,10 @@ import UIKit
 
 class LayoutTwoCell: UICollectionViewCell {
     
-    @IBOutlet var plusCollection: [UIButton]!
-    @IBOutlet var imageCollection: [UIImageView]!
+    @IBOutlet private var plusCollection: [UIButton]!
+    @IBOutlet private var imageCollection: [UIImageView]!
     var selectedTag: Int = 1
     var delegate: LayoutCellDelegate?
-    let collageCellManager = CollageCellManager()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,7 +35,6 @@ class LayoutTwoCell: UICollectionViewCell {
 }
 
 extension LayoutTwoCell: LayoutCell {
-    
     func makeNewCell(with imageArray: [Int : UIImage]) {
         imageArray.forEach { (key: Int, value: UIImage) in
             imageCollection.filter({$0.tag == key}).first!.image = value

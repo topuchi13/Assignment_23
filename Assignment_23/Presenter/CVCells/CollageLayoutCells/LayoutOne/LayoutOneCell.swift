@@ -13,7 +13,6 @@ class LayoutOneCell: UICollectionViewCell {
     @IBOutlet private var imageCollection: [UIImageView]!
     var selectedTag: Int = 1
     var delegate: LayoutCellDelegate?
-    let collageCellManager = CollageCellManager()
     
     override func awakeFromNib() {
         super.awakeFromNib()

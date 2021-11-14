@@ -23,9 +23,7 @@ class MakeNewVC: UIViewController {
         collectionView.register(UINib(nibName: "LayoutOneCell", bundle: nil), forCellWithReuseIdentifier: "LayoutOneCell")
         collectionView.register(UINib(nibName: "LayoutTwoCell", bundle: nil), forCellWithReuseIdentifier: "LayoutTwoCell")
         collectionView.register(UINib(nibName: "LayoutThreeCell", bundle: nil), forCellWithReuseIdentifier: "LayoutThreeCell")
-        
     }
-    
     
     @IBAction func layoutChanged(_ sender: UISegmentedControl) {
         collectionView.reloadData()
@@ -52,8 +50,6 @@ class MakeNewVC: UIViewController {
         }
         return image
     }
-    
-
 }
 
 
@@ -63,7 +59,7 @@ extension MakeNewVC: UICollectionViewDelegate {
 }
 
 extension MakeNewVC: LayoutCellDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate  {
-        
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -73,7 +69,7 @@ extension MakeNewVC: LayoutCellDelegate, UIImagePickerControllerDelegate & UINav
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             selectedImages[activeTag] = pickedImage
             collectionView.reloadData()
-                
+            
         }
         dismiss(animated: true, completion: nil)
     }
